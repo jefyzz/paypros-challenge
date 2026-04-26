@@ -34,7 +34,7 @@ export default function TaskFilters({ activeFilter, onChange, counts }: TaskFilt
             className="relative flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200"
             style={{
               fontFamily: 'var(--font-display)',
-              color: isActive ? 'var(--color-bg)' : 'var(--color-text-muted)',
+              color: isActive ? 'var(--color-text)' : 'var(--color-text-muted)',
               background: isActive ? 'var(--color-accent)' : 'transparent',
             }}
           >
@@ -43,7 +43,7 @@ export default function TaskFilters({ activeFilter, onChange, counts }: TaskFilt
               className="rounded-full px-1.5 py-0.5 text-xs font-bold"
               style={{
                 background: isActive ? 'rgba(0,0,0,0.2)' : 'var(--color-border)',
-                color: isActive ? 'var(--color-bg)' : 'var(--color-text-muted)',
+                color: isActive ? 'var(--color-text)' : 'var(--color-text-muted)',
               }}
             >
               {count}

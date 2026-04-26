@@ -30,7 +30,7 @@ export default function TaskCard({ task, onEdit, onDelete, onToggleStatus }: Tas
 
   return (
     <article
-      className="card group relative flex flex-col gap-3 hover:border-amber-500/40 hover:-translate-y-0.5 transition-all duration-200"
+      className="card group relative flex flex-col gap-3 hover:border-neutral-500/40 hover:-translate-y-0.5 transition-all duration-200"
       style={{ opacity: isCompleted ? 0.75 : 1 }}
     >
       {/* Status indicator strip */}
@@ -41,7 +41,7 @@ export default function TaskCard({ task, onEdit, onDelete, onToggleStatus }: Tas
             ? 'var(--color-success)'
             : overdue
             ? 'var(--color-danger)'
-            : 'var(--color-accent)',
+            : 'var(--color-warning)',
         }}
       />
 

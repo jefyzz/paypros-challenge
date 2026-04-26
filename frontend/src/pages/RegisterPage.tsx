@@ -142,7 +142,7 @@ export default function RegisterPage() {
             <Link
               to="/login"
               className="font-medium transition-colors hover:opacity-80"
-              style={{ color: 'var(--color-accent)' }}
+              style={{ color: 'var(--color-accent-alt)' }}
             >
               Sign in
             </Link>
