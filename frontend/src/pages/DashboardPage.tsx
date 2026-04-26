@@ -31,7 +31,7 @@ export default function DashboardPage() {
 
   // Initial load
   useEffect(() => {
-    void fetchTasks()
+    fetchTasks()
   }, [fetchTasks])
 
   // Refetch when filter changes
