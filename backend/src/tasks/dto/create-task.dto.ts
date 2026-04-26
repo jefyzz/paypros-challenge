@@ -9,7 +9,7 @@ import {
 export class CreateTaskDto {
   @IsString()
   @IsNotEmpty({ message: 'Title is required' })
-  title: string;
+  title!: string;
 
   @IsString()
   @IsOptional()
