@@ -141,9 +141,23 @@ npm install
 # Run database migration (creates tables)
 npx prisma migrate dev --name init
 
+# Generate Prisma Client types
+npx prisma generate
+
 # Start the development server
 npm run start:dev
 ```
+
+> [!NOTE]
+> **Database Privileges & Shadow Database (`P3014`/`P1010` errors):**
+> Prisma Migrate requires global database-creation privileges to build its temporary **shadow database**.
+> To automate this, `init.sql` is mounted to `/docker-entrypoint-initdb.d/init.sql` in `docker-compose.yml` to automatically grant these privileges on startup.
+>
+> If you have an already initialized MySQL volume and encounter database permission errors, simply recreate the container to trigger the initialization script:
+> ```bash
+> docker-compose down -v
+> docker-compose up -d
+> ```
 
 The API will be available at **http://localhost:3000**.
 
