@@ -34,11 +34,10 @@ export default function DashboardPage() {
     fetchTasks()
   }, [fetchTasks])
 
-  // Refetch when filter changes
-  const handleFilterChange = useCallback(async (filter: TaskStatus | 'all') => {
+  // Change active filter
+  const handleFilterChange = useCallback((filter: TaskStatus | 'all') => {
     setActiveFilter(filter)
-    await fetchTasks(filter)
-  }, [setActiveFilter, fetchTasks])
+  }, [setActiveFilter])
 
   // Computed counts for filter tabs
   const counts = {
